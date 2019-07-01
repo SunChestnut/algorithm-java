@@ -51,11 +51,27 @@ public class SolutionSix {
         return ret.toString();
     }
 
+    private static String convertT(String s, int numRows) {
+        if (numRows == 1) {
+            return s;
+        }
+        List<StringBuilder> builderList = new ArrayList<>();
+        for (int i = 0; i <= Math.min(s.length(), numRows); i++) {
+            builderList.add(new StringBuilder());
+        }
+
+        boolean flag = false;
+
+
+        return "";
+    }
+
     public static void main(String[] args) {
         String str = "LEETCODEISHIRING";
         int numRows = 3;
         String resultStr = "LCIRETOESIIGEDHN";
-        System.out.println(resultStr.equals(convert(str, numRows)));
+//        System.out.println(resultStr.equals(convert(str, numRows)));
+        System.out.println(convertT(str, numRows));
     }
 
 
