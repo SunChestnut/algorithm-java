@@ -1,5 +1,8 @@
 package com.sun;
 
+import com.sun.util.ToolUtil;
+
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -51,27 +54,42 @@ public class SolutionSix {
         return ret.toString();
     }
 
+
     private static String convertT(String s, int numRows) {
         if (numRows == 1) {
             return s;
         }
         List<StringBuilder> builderList = new ArrayList<>();
-        for (int i = 0; i <= Math.min(s.length(), numRows); i++) {
+        for (int i = 0; i < Math.min(numRows, s.length()); i++) {
             builderList.add(new StringBuilder());
         }
 
-        boolean flag = false;
+        int curRow = 0;
+        boolean goingDown = false;
+        for (char c : s.toCharArray()) {
+            builderList.get(curRow).append(c);
+            if (curRow == 0 || curRow == numRows - 1) {
+                goingDown = !goingDown;
+            }
+            curRow += goingDown ? 1 : -1;
+        }
 
-
-        return "";
+        // 拼接Z形字符结果
+        StringBuilder builder = new StringBuilder();
+        for (StringBuilder row : builderList) {
+            builder.append(row);
+        }
+        return builder.toString();
     }
 
     public static void main(String[] args) {
+        Instant startTime = Instant.now();
         String str = "LEETCODEISHIRING";
         int numRows = 3;
         String resultStr = "LCIRETOESIIGEDHN";
-//        System.out.println(resultStr.equals(convert(str, numRows)));
-        System.out.println(convertT(str, numRows));
+
+        System.out.println(resultStr.equals(convertT(str, numRows)));
+        ToolUtil.runTime(startTime);
     }
 
 

@@ -1,6 +1,7 @@
 package com.sun.util;
 
-import java.util.Date;
+import java.time.Duration;
+import java.time.Instant;
 
 /**
  * 工具类
@@ -13,12 +14,11 @@ public class ToolUtil {
     /**
      * 计算方法运行时间
      *
-     * @param date 方法开始运行的时间
-     * @return 耗费的总时长
+     * @param startTime 方法开始运行的时间
      */
-    public static String runTime(Date date) {
-        long time = System.currentTimeMillis() - date.getTime();
-        Double value = (double) time / 1000;
-        return String.valueOf(value);
+    public static void runTime(Instant startTime) {
+        Instant endTime = Instant.now();
+        long estimatedTime = Duration.between(startTime, endTime).toMillis();
+        System.out.println("代码执行共消耗：" + estimatedTime + "ms");
     }
 }

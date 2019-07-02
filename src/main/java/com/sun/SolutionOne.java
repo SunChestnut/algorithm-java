@@ -2,6 +2,7 @@ package com.sun;
 
 import com.sun.util.ToolUtil;
 
+import java.time.Instant;
 import java.util.Arrays;
 import java.util.Date;
 
@@ -36,11 +37,11 @@ public class SolutionOne {
     }
 
     public static void main(String[] args) {
-        Date date = new Date();
+        Instant startTime = Instant.now();
         int[] nums = {3, 2, 4};
         int target = 6;
         int[] twoSum = twoSum(nums, target);
         System.out.println(Arrays.toString(twoSum));
-        System.out.println("代码执行共消耗：" + ToolUtil.runTime(date) + "s");
+        ToolUtil.runTime(startTime);
     }
 }

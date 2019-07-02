@@ -3,6 +3,7 @@ package com.sun;
 import com.sun.util.ToolUtil;
 
 import java.text.DecimalFormat;
+import java.time.Instant;
 import java.util.Date;
 
 /**
@@ -56,9 +57,9 @@ public class SolutionSeven {
     }
 
     public static void main(String[] args) {
-        Date date = new Date();
+        Instant startTime = Instant.now();
         int num = -2147483412;
         System.out.println(reverse(num));
-        System.out.println("代码执行共消耗：" + ToolUtil.runTime(date) + "s");
+        ToolUtil.runTime(startTime);
     }
 }

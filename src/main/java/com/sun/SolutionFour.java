@@ -2,8 +2,8 @@ package com.sun;
 
 import com.sun.util.ToolUtil;
 
+import java.time.Instant;
 import java.util.Arrays;
-import java.util.Date;
 
 /**
  * 题目：给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。
@@ -58,11 +58,11 @@ public class SolutionFour {
     }
 
     public static void main(String[] args) {
-        Date date = new Date();
+        Instant startTime = Instant.now();
         int[] nums1 = {1, 3};
         int[] nums2 = {2};
         System.out.println(findMedianSortedArrays(nums1, nums2));
-        System.out.println("代码执行共消耗：" + ToolUtil.runTime(date) + "s");
+        ToolUtil.runTime(startTime);
     }
 
     /**

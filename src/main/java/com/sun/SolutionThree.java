@@ -2,6 +2,7 @@ package com.sun;
 
 import com.sun.util.ToolUtil;
 
+import java.time.Instant;
 import java.util.*;
 
 /**
@@ -112,12 +113,12 @@ public class SolutionThree {
     public static void main(String[] args) {
 //        String s = ExampleModel.exampleOne;
         String s = "abcabcbb";
-        Date date = new Date();
+        Instant startTime = Instant.now();
         System.out.println(slidingWindow(s));
-        System.out.println("执行时间为：" + ToolUtil.runTime(date) + "s");
+        ToolUtil.runTime(startTime);
 
         Date date2 = new Date();
         System.out.println(slidingWindowBetter(s));
-        System.out.println("执行时间为：" + ToolUtil.runTime(date2) + "s");
+        ToolUtil.runTime(startTime);
     }
 }

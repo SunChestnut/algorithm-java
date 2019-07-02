@@ -4,6 +4,7 @@ package com.sun;
 import com.sun.model.ExampleModel;
 import com.sun.util.ToolUtil;
 
+import java.time.Instant;
 import java.util.Date;
 
 /**
@@ -61,10 +62,10 @@ public class SolutionFive {
 
 
     public static void main(String[] args) {
-        Date date = new Date();
+        Instant startTime = Instant.now();
         String str = ExampleModel.exampleTwo;
         System.out.println(longestPalindrome(str));
-        System.out.println("代码执行共消耗：" + ToolUtil.runTime(date) + "s");
+        ToolUtil.runTime(startTime);
     }
 }
 
