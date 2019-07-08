@@ -1,7 +1,9 @@
 package com.sun.util;
 
+import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.time.Instant;
+import java.util.Date;
 
 /**
  * 工具类
@@ -19,6 +21,7 @@ public class ToolUtil {
     public static void runTime(Instant startTime) {
         Instant endTime = Instant.now();
         long estimatedTime = Duration.between(startTime, endTime).toMillis();
-        System.out.println("代码执行共消耗：" + estimatedTime + "ms");
+        double transformToS = (double) estimatedTime / 1000;
+        System.out.println("代码执行共消耗：" + transformToS + "s");
     }
 }
