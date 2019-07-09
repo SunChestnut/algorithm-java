@@ -25,3 +25,17 @@ Both to methods and variables . It is not acceptable for a mid-level developer t
 ***Communicating with your code is far more important than communicating with documentation and comments.***
 
 ***The purpose of comments is to explain the "why" , not the "how" in the code.***
+
+Having meaningful variables helps you communicate with whoever reads the code better , and may remove the need for an excessive amount of comments .  The same goes both for **variables** and **methods** . Also , when struggling with naming a method for too long , consider refactoring your code so that the method gets more simple . A name for a good , clean method always comes to mind easier than the name of a cluttered one.
+
+***When struggling with naming things , take a step back and think of the possibility that the component you are trying to name is too complicated and needs refactoring.***
+
+#### 3.Don't clutter your methods with many parameters
+
+Having many parameters in a method is a sign for refactoring . More often than not , writing this kind of methods violates the SPR(Single Responsibility Principle) meaning that they do too many things . An efficient , clean method does one thing , **well** . As Uncle Bob said , three is the maximum arguments acceptable . Although this may not strict . It gives you an overview of the desired number of arguments in a method . 
+
+***Fight the urge to change some of your method's local parameters into class fields . Consider refactoring your code so that a method does fewer things , or break up your method into 2 separate ones .*** 
+
+Quote by Robert  C. Martin: "*Functions should have a small number of  arguments . No arguments is best , followed by one , two , and three . More than three is very questionable and should be avoided with prejudice* . "
+
+ 
