@@ -1,4 +1,8 @@
-### **The 14 habits of highly effective developers **
+## From : https://paulisaris.com/the-14-habits-of-highly-effective-developers-part-1/
+
+
+
+### The 14 habits of highly effective developers **
 
 #### Introduction
 
@@ -32,10 +36,17 @@ Having meaningful variables helps you communicate with whoever reads the code be
 
 #### 3.Don't clutter your methods with many parameters
 
-Having many parameters in a method is a sign for refactoring . More often than not , writing this kind of methods violates the SPR(Single Responsibility Principle) meaning that they do too many things . An efficient , clean method does one thing , **well** . As Uncle Bob said , three is the maximum arguments acceptable . Although this may not strict . It gives you an overview of the desired number of arguments in a method . 
+Having many parameters in a method is a sign for refactoring . More often than not , writing this kind of methods violates the SPR(Single Responsibility Principle) meaning that they do too many things . An efficient , clean method does **one** thing , well . As Uncle Bob said , three is the maximum arguments acceptable . Although this may not strict . It gives you an overview of the desired number of arguments in a method . 
 
 ***Fight the urge to change some of your method's local parameters into class fields . Consider refactoring your code so that a method does fewer things , or break up your method into 2 separate ones .*** 
 
 Quote by Robert  C. Martin: "*Functions should have a small number of  arguments . No arguments is best , followed by one , two , and three . More than three is very questionable and should be avoided with prejudice* . "
 
- 
+ #### 4.Avoid too many methods in a class
+
+As with the number of parameters , the number of methods that a class has is also important . Big classes with a lot of methods usually signify a component that knows too much or does too much . We  refer to these components as **God Classes** to characterize an anti-pattern of writing highly coupled code.
+
+If you have many methods in a class , consider how often you will need to enter this class in order to change its behavior , as the code progresses through time . This may violate the **Open-closed principle** starting that " software entities (classes , modules , functions , etc . )" should be open extension , but closed for modification . 
+
+#### 5.Use LTS / stable releases when using a 3rd party library
+
