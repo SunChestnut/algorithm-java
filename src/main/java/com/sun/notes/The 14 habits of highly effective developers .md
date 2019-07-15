@@ -1,8 +1,6 @@
-## From : https://paulisaris.com/the-14-habits-of-highly-effective-developers-part-1/
+🧐 From : https://paulisaris.com/the-14-habits-of-highly-effective-developers-part-1/
 
-
-
-### The 14 habits of highly effective developers **
+​											**The 14 habits of highly effective developers** 
 
 #### Introduction
 
@@ -50,3 +48,28 @@ If you have many methods in a class , consider how often you will need to enter 
 
 #### 5.Use LTS / stable releases when using a 3rd party library
 
+Always keep in mind the next guy that will be required to use your code and recompile the project . Using LTS(Long Term Support) versions of libraries, plugins and frameworks may not be best when it comes to shiny new features but it will be better when needing to re-build or re-compile the code sometimes in the future . 
+
+***Fight the urge to use the latest and greatest version of a tool and stick to safest and more stable one . Your future self and co-workers will thank you !*** 
+
+#### 6. Learn to identify the most common design patterns 
+
+That's right , most big projects are built using one or more Design Patterns . A Design Pattern defines the description , the relationships and the abstraction level in a component . You don't need to know all of them or be good in all of them , but knowing the most essential will be beneficial not only in terms of thinking and designing but also identifying them in a code base . 
+
+***When able to identify a design pattern in a code base , one is also able to extend it or add more functionality to it , by knowing in which places to look for specific classes and objects.*** 
+
+A well-implemented Design pattern causes everyone involved in a project to speak the same design language and communicate more effectively through the code . 
+
+#### 7.Always think of the next guy
+
+Whether it is you , another co-worker , a new employee or even a developer in another company , someone will be required to extend your code or add more functionality to it . It is really hard to get a grasp of this since most junior developers are used in a typical University project paradigm where you write the required code and then nobody ever gets involved with it . 
+
+Things in a professional setting are somewhat different ; You will be asked to write code in a project that was written many years age , and your code will have to be ready for "the next guy" that may come in a few years . So whenever you are ready to write a temporary "hack" just to get something working , whenever you add something in the build process and avoid documenting it , whenever you skip refactoring , you are simply adding more **Technical debt**  that someone will have to deal with in the feature . 
+
+***Take the time to review you work every couple of hours . Add needed documentation to README files , delete unused code and files that you temporarily added to the project . When not sure about an architectural or programing decision you took , communicate with someone more experienced in your workplace . You will not only improve the state of the code you wrote , but also you will get better at handing such situations in the future , and getting used to having your pride hurt . (This is something that will happen all the time when you are not a junior anymore :D)***
+
+#### Conclusion
+
+Transitioning from a Junior to a Mid-level developer is not something that happens overnight . Advancing your career and getting better as a professional developer is a matter of forming good habits . In this article , I begin laying out the most important habits one needs to form to begin this transition and make an impact as a Software Developer .
+
+Please leave your comments below regarding these habits and stay tuned for Part 2! :-)

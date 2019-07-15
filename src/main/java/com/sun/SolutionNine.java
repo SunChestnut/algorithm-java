@@ -8,14 +8,19 @@ package com.sun;
  **/
 public class SolutionNine {
 
-    private static boolean isPalindrome(int x) {
-        int standardNum = 1;
-
-    }
+//    private static boolean isPalindrome(int x) {
+//        int standardNum = 1;
+//
+//    }
 
     public static void main(String[] args) {
-        int num = 121;
-        System.out.println(isPalindrome(num));
+//        int num = 121;
+//        System.out.println(isPalindrome(num));
+
+        String a = "";
+        String b = "";
+        String c = a + " " + b;
+        System.out.println(c);
     }
 
 
