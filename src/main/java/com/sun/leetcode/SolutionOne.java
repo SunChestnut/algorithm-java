@@ -1,4 +1,4 @@
-package com.sun;
+package com.sun.leetcode;
 
 import com.sun.util.ToolUtil;
 

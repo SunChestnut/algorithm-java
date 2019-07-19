@@ -1,4 +1,4 @@
-package com.sun;
+package com.sun.leetcode;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
