@@ -50,7 +50,7 @@ import java.time.Instant;
  * @author: syl
  * @date: 2019/7/19 16:36
  **/
-public class SolutionTwelve {
+public class SolutionTwelfth {
 
     private static String intToRoman(int num) {
         final int[] radix = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
@@ -77,8 +77,12 @@ public class SolutionTwelve {
 
     /**
      * Tips:
-     * 1.
-     *
+     * 1.返回值是String类型，简化了难度，无需考虑进位问题。
+     * 2.使用final声明数组：使用final修饰引用型变量，比如数组，数组内部值可更改，但无法让该变量指向另一变量。
+     *   Advantages: After a constructor has completed , any final fields are guaranteed to be visible in other threads immediately .
+     * 3.StringBuilder VS StringBuffer :
+     *      String is immutable whereas StringBuffer and StringBuilder are mutable classes . StringBuffer is thread safe and synchronized whereas StringBuilder is not ,
+     *      that's why StringBuilder is more faster then StringBuffer . String concat + operator internally uses StringBuffer or StringBuilder .
      *
      */
 }
