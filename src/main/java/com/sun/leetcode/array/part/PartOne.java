@@ -35,23 +35,15 @@ import java.util.Arrays;
  **/
 public class PartOne {
 
-    private static int removeDuplicates(int[] nums) {
-        if (nums.length == 0) {
-            return 0;
-        }
-        int index = 1;
-        for (int i = 1; i < nums.length; i++) {
-            if (nums[i] != nums[index - 1]) {
-                nums[index] = nums[i];
-                index++;
-
-                // nums[index ++] = nums[i];
-            }
-
-        }
-        return index;
-    }
-
+    /**
+     * 双指针法
+     * 本题需注意的要点：给定的源数组是排好序的
+     * 在排好序的数组上放置两个指针，i为慢指针，j为快指针，当nums[i] == nums[j]时，就增加j的值以跳过重复项
+     * 当遇到nums[i] != nums[j]的情况时，对两个非重复值进行处理，即将nums[j]的值赋给nums[i+1]，然后递增i，重复上述相同的步骤。
+     *
+     * @param nums 源数组
+     * @return int 无重复最长数组长度
+     */
     private static int removeDuplicatesFromOffical(int[] nums) {
         if (nums.length == 0) {
             return 0;
@@ -67,13 +59,6 @@ public class PartOne {
     }
 
     public static void main(String[] args) {
-
-        int[] nums = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
-        System.out.println(Arrays.toString(nums));
-        System.out.println(removeDuplicates(nums));
-
-        System.out.println("*********************");
-
         int[] numsT = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
         System.out.println(Arrays.toString(numsT));
         System.out.println(removeDuplicatesFromOffical(numsT));
