@@ -89,4 +89,26 @@ public class SolutionTest {
         System.out.println(SolutionTwelfth.intToRoman(num));
         ToolUtil.runTime(startTime);
     }
+
+    @Test
+    public void solutionThirteenthTest() {
+        String param1 = "III";
+        String param2 = "IV";
+        String param3 = "IX";
+        String param4 = "LVIII";
+        String param5 = "MCMXCIV";
+        if (SolutionThirteenth.romanToInt(param1) != 3) {
+            System.out.println("param1 test fail !");
+        } else if (SolutionThirteenth.romanToInt(param2) != 4) {
+            System.out.println("param2 test fail !");
+        } else if (SolutionThirteenth.romanToInt(param3) != 9) {
+            System.out.println("param3 test fail !");
+        } else if (SolutionThirteenth.romanToInt(param4) != 58) {
+            System.out.println("param4 test fail !");
+        } else if (SolutionThirteenth.romanToInt(param5) != 1994) {
+            System.out.println("param5 test fail !");
+        } else {
+            System.out.println("test successful !");
+        }
+    }
 }
