@@ -1,10 +1,6 @@
 package com.sun.leetcode;
 
-import com.sun.util.ToolUtil;
-
 import java.text.DecimalFormat;
-import java.time.Instant;
-import java.util.Date;
 
 /**
  * 题目：给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。
@@ -25,9 +21,9 @@ import java.util.Date;
  * @author: syl
  * @date: 2019/6/26 10:08
  **/
-public class SolutionSeven {
+class SolutionSeven {
 
-    private static int reverse(int x) {
+    static int reverse(int x) {
         DecimalFormat df = new DecimalFormat("0");
         String strNum = String.valueOf(x);
         String[] strings = strNum.split("");
@@ -44,22 +40,15 @@ public class SolutionSeven {
             return 0;
         }
         if ("-".equals(String.valueOf(builder.charAt(0)))) {
-            if (builder.length() >= 11 && Long.valueOf(builder.toString()) < Long.valueOf("-" + df.format(Math.pow(2, 31)))) {
+            if (builder.length() >= 11 && Long.parseLong(builder.toString()) < Long.parseLong("-" + df.format(Math.pow(2, 31)))) {
                 return 0;
             }
         }
         if (!"-".equals(String.valueOf(builder.charAt(0)))) {
-            if (builder.length() >= 10 && Long.valueOf(builder.toString()) > Long.valueOf(df.format(Math.pow(2, 31)))) {
+            if (builder.length() >= 10 && Long.parseLong(builder.toString()) > Long.parseLong(df.format(Math.pow(2, 31)))) {
                 return 0;
             }
         }
-        return Integer.valueOf(builder.toString());
-    }
-
-    public static void main(String[] args) {
-        Instant startTime = Instant.now();
-        int num = -2147483412;
-        System.out.println(reverse(num));
-        ToolUtil.runTime(startTime);
+        return Integer.parseInt(builder.toString());
     }
 }

@@ -50,9 +50,9 @@ import java.time.Instant;
  * @author: syl
  * @date: 2019/7/19 16:36
  **/
-public class SolutionTwelfth {
+class SolutionTwelfth {
 
-    private static String intToRoman(int num) {
+    static String intToRoman(int num) {
         final int[] radix = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
         final String[] symbol = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
         StringBuilder roman = new StringBuilder();
@@ -64,14 +64,6 @@ public class SolutionTwelfth {
             }
         }
         return roman.toString();
-    }
-
-    public static void main(String[] args) {
-        Instant startTime = Instant.now();
-        int num = 300;
-        System.out.println(intToRoman(num));
-        ToolUtil.runTime(startTime);
-
     }
 
 

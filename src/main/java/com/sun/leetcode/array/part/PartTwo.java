@@ -21,7 +21,7 @@ package com.sun.leetcode.array.part;
  * @author: syl
  * @date: 2019/7/25 11:19
  **/
-public class PartTwo {
+class PartTwo {
 
     /**
      * 暴力法
@@ -30,7 +30,7 @@ public class PartTwo {
      * @param prices 源数组
      * @return int 最大利润
      */
-    private static int maxProfitOne(int[] prices) {
+    static int maxProfitOne(int[] prices) {
         int maxProfit = 0;
         for (int i = 0; i < prices.length; i++) {
             for (int j = i + 1; j < prices.length; j++) {
@@ -51,7 +51,7 @@ public class PartTwo {
      * @param prices 源数组
      * @return int 最大利润
      */
-    private static int maxProfitTwo(int[] prices) {
+    static int maxProfitTwo(int[] prices) {
         int minPrice = Integer.MAX_VALUE;
         int maxProfit = 0;
         for (int i = 0; i < prices.length; i++) {
@@ -72,7 +72,7 @@ public class PartTwo {
      * @param prices 源数组
      * @return int 最大利润
      */
-    private static int maxProfitThree(int[] prices) {
+    static int maxProfitThree(int[] prices) {
         int minPrice = Integer.MAX_VALUE;
         int maxProfit = 0;
         for (int price : prices) {
@@ -83,12 +83,5 @@ public class PartTwo {
             }
         }
         return maxProfit;
-    }
-
-    public static void main(String[] args) {
-        int[] prices = {7, 1, 5, 3, 6, 4};
-        System.out.println(maxProfitOne(prices));
-        System.out.println(maxProfitTwo(prices));
-        System.out.println(maxProfitThree(prices));
     }
 }

@@ -33,9 +33,9 @@ import java.util.List;
  * @author: syl
  * @date: 2019/6/27 15:54
  **/
-public class SolutionSix {
+class SolutionSix {
 
-    private static String convert(String s, int numRows) {
+    static String convert(String s, int numRows) {
         if (numRows == 1) {
             return s;
         }
@@ -55,7 +55,7 @@ public class SolutionSix {
     }
 
 
-    private static String convertT(String s, int numRows) {
+    static String convertT(String s, int numRows) {
         if (numRows == 1) {
             return s;
         }
@@ -81,16 +81,5 @@ public class SolutionSix {
         }
         return builder.toString();
     }
-
-    public static void main(String[] args) {
-        Instant startTime = Instant.now();
-        String str = "LEETCODEISHIRING";
-        int numRows = 3;
-        String resultStr = "LCIRETOESIIGEDHN";
-
-        System.out.println(resultStr.equals(convertT(str, numRows)));
-        ToolUtil.runTime(startTime);
-    }
-
 
 }

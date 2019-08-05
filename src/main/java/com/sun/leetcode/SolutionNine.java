@@ -1,9 +1,5 @@
 package com.sun.leetcode;
 
-import com.sun.util.ToolUtil;
-
-import java.time.Instant;
-
 /**
  * 判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。
  * ----------------------------------------------------------
@@ -28,7 +24,7 @@ import java.time.Instant;
  * @author: syl
  * @date: 2019/7/9 16:58
  **/
-public class SolutionNine {
+class SolutionNine {
 
     /**
      * 解法一：将数字转换成字符串
@@ -36,7 +32,7 @@ public class SolutionNine {
      * @param x x
      * @return boolean
      */
-    private static boolean isPalindromeMethodOne(int x) {
+    static boolean isPalindromeMethodOne(int x) {
         if (x < 0) {
             return false;
         }
@@ -61,7 +57,7 @@ public class SolutionNine {
      * @param x x
      * @return boolean
      */
-    private static boolean isPalindromeMethodTwo(int x) {
+    static boolean isPalindromeMethodTwo(int x) {
         String reversedStr = (new StringBuilder(x + "").reverse().toString());
         return (x + "").equals(reversedStr);
     }
@@ -79,7 +75,7 @@ public class SolutionNine {
      * @param x x
      * @return boolean
      */
-    private static boolean isPalindromeMethodThree(int x) {
+    static boolean isPalindromeMethodThree(int x) {
         if (x < 0) {
             return false;
         }
@@ -116,7 +112,7 @@ public class SolutionNine {
      * @param x x
      * @return boolean
      */
-    private static boolean isPalindromeMethodFour(int x) {
+    static boolean isPalindromeMethodFour(int x) {
         // 当x为负数或者x的最后一位为0时，直接返回false
         if (x < 0 || (x % 10 == 0 && x != 0)) {
             return false;
@@ -128,12 +124,4 @@ public class SolutionNine {
         }
         return x == revertedNumber || x == revertedNumber / 10;
     }
-
-    public static void main(String[] args) {
-        Instant now = Instant.now();
-        int num = 1221;
-        System.out.println(isPalindromeMethodFour(num));
-        ToolUtil.runTime(now);
-    }
-
 }

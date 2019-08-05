@@ -1,8 +1,5 @@
 package com.sun.leetcode;
 
-import com.sun.util.ToolUtil;
-
-import java.time.Instant;
 import java.util.Arrays;
 
 /**
@@ -24,7 +21,7 @@ import java.util.Arrays;
  * @author: syl
  * @date: 2019/6/19 15:13
  **/
-public class SolutionFour {
+class SolutionFour {
 
     /**
      * 解题思路：
@@ -34,7 +31,7 @@ public class SolutionFour {
      * 4.若是偶数：求中间两个值的和并除以2
      * 5.若是奇数：直接返回最中间的数
      */
-    private static double findMedianSortedArrays(int[] nums1, int[] nums2) {
+    static double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int length = nums1.length + nums2.length;
         int[] nums = new int[length];
         if (nums1.length >= 1) {
@@ -57,13 +54,6 @@ public class SolutionFour {
         return result;
     }
 
-    public static void main(String[] args) {
-        Instant startTime = Instant.now();
-        int[] nums1 = {1, 3};
-        int[] nums2 = {2};
-        System.out.println(findMedianSortedArrays(nums1, nums2));
-        ToolUtil.runTime(startTime);
-    }
 
     /**
      * public static native void arraycopy(Object src,

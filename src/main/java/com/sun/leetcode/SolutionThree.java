@@ -1,9 +1,9 @@
 package com.sun.leetcode;
 
-import com.sun.util.ToolUtil;
-
-import java.time.Instant;
-import java.util.*;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * 题目：给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
@@ -27,11 +27,11 @@ import java.util.*;
  * @author: syl
  * @date: 2019/6/18 17:31
  **/
-public class SolutionThree {
+class SolutionThree {
 
     /*……********************* 方法一：暴力法 *********************……*/
 
-    private static int lengthOfLongestSubstring(String s) {
+    static int lengthOfLongestSubstring(String s) {
         int ans = 0;
         for (int i = 0; i < s.length(); i++) {
             for (int j = i + 1; j <= s.length(); j++) {
@@ -73,7 +73,7 @@ public class SolutionThree {
      * @param s 初始字符串
      * @return 最长无重复字串的长度
      */
-    private static int slidingWindow(String s) {
+    static int slidingWindow(String s) {
         int n = s.length();
         Set<Character> set = new HashSet<>();
         int maxLength = 0, i = 0, j = 0;
@@ -96,7 +96,7 @@ public class SolutionThree {
      * @param s 初始字符串
      * @return 最长无重复字串的长度
      */
-    private static int slidingWindowBetter(String s) {
+    static int slidingWindowBetter(String s) {
         int n = s.length(), maxLength = 0;
         Map<Character, Integer> map = new HashMap<>();
         for (int j = 0, i = 0; j < n; j++) {
@@ -110,15 +110,4 @@ public class SolutionThree {
     }
 
 
-    public static void main(String[] args) {
-//        String s = ExampleModel.exampleOne;
-        String s = "abcabcbb";
-        Instant startTime = Instant.now();
-        System.out.println(slidingWindow(s));
-        ToolUtil.runTime(startTime);
-
-        Date date2 = new Date();
-        System.out.println(slidingWindowBetter(s));
-        ToolUtil.runTime(startTime);
-    }
 }

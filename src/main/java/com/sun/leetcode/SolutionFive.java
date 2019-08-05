@@ -23,9 +23,9 @@ import java.util.Date;
  * @author: syl
  * @date: 2019/6/20 17:08
  **/
-public class SolutionFive {
+class SolutionFive {
 
-    private static String longestPalindrome(String s) {
+    static String longestPalindrome(String s) {
         int n = s.length();
         int maxLength = 0;
         String longestPalindromeStr = "";
@@ -61,12 +61,6 @@ public class SolutionFive {
     }
 
 
-    public static void main(String[] args) {
-        Instant startTime = Instant.now();
-        String str = ExampleModel.exampleTwo;
-        System.out.println(longestPalindrome(str));
-        ToolUtil.runTime(startTime);
-    }
 }
 
 /*……*********************************

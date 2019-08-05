@@ -33,7 +33,7 @@ import java.util.Arrays;
  * @author: syl
  * @date: 2019/7/24 15:34
  **/
-public class PartOne {
+class PartOne {
 
     /**
      * 双指针法
@@ -44,7 +44,7 @@ public class PartOne {
      * @param nums 源数组
      * @return int 无重复最长数组长度
      */
-    private static int removeDuplicatesFromOffical(int[] nums) {
+    static int removeDuplicatesFromOfficial(int[] nums) {
         if (nums.length == 0) {
             return 0;
         }
@@ -57,11 +57,4 @@ public class PartOne {
         }
         return i + 1;
     }
-
-    public static void main(String[] args) {
-        int[] numsT = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
-        System.out.println(Arrays.toString(numsT));
-        System.out.println(removeDuplicatesFromOffical(numsT));
-    }
-
 }
