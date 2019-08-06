@@ -55,7 +55,7 @@ class SolutionFour {
     }
 
 
-    /**
+    /*……*********************************
      * public static native void arraycopy(Object src,
      *                                     int  srcPos,
      *                                     Object dest,

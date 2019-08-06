@@ -1,10 +1,11 @@
 package com.sun.leetcode.array.part;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
- * TODO
+ * ----------------------------------------------------------
+ * <p>
+ * ----------------------------------------------------------
+ * <p>
+ * ----------------------------------------------------------
  *
  * @author: syl
  * @date: 2019/7/29 9:41
@@ -29,5 +30,13 @@ public class PartThree {
 
     public static void main(String[] args) {
     }
+
+    /*
+     *
+     *
+     *
+     * @param
+     * @return
+     */
 
 }

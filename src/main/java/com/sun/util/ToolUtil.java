@@ -1,9 +1,7 @@
 package com.sun.util;
 
-import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.time.Instant;
-import java.util.Date;
 
 /**
  * 工具类
