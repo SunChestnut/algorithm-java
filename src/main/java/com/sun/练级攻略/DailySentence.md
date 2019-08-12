@@ -27,3 +27,14 @@
 > **A good book may be among the best of friends .** 
 
 ​	-- 一本好书可能就是最好的朋友之一。
+
+
+
+
+
+
+#### August 11
+
+> **As Stevenson has said,being happy is a duty.**
+
+​	-- 正如斯蒂文生所说：快乐是一种责任。
