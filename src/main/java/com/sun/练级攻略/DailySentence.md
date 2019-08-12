@@ -28,12 +28,25 @@
 
 ​	-- 一本好书可能就是最好的朋友之一。
 
+#### August 9
 
+> **Nothing is won by force.**
 
+​ —- 武力并不能带来最终的胜利。
 
+#### August 10
 
+> **It is hard to fail,but it is worse never to have tried to succeeded.
+
+-- 失败是难以忍受的，但更为糟糕的是从来不去努力争取成功
 
 #### August 11
+
+> ** Reading makes a full man; conference a ready man; and writing an exact man.
+
+-- 读书使人充实，讨论使人机智，笔记使人准确
+
+#### August 12
 
 > **As Stevenson has said,being happy is a duty.**
 
