@@ -51,3 +51,9 @@
 > **As Stevenson has said,being happy is a duty.**
 
 ​	-- 正如斯蒂文生所说：快乐是一种责任。
+
+#### August 13
+
+> **Remember me when I am gone away , gone far away into the silent land.**
+
+​	-- 请记住我，当我已离去，到那遥远而静谧的土地。
