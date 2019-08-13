@@ -1,7 +1,8 @@
-package com.sun.leetcode;
+package com.sun.algorithm.solution;
 
-import com.sun.model.ExampleModel;
-import com.sun.util.ToolUtil;
+
+import com.sun.algorithm.model.ExampleModel;
+import com.sun.algorithm.util.ToolUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,7 +14,7 @@ import java.util.Date;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
-public class SolutionTest {
+public class SolutionOneTest {
 
     @Test
     public void solutionOneTest() {

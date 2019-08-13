@@ -7,6 +7,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * TODO
@@ -46,5 +48,14 @@ public class DailyTest {
             n1 = n2;
             n2 = n3;
         }
+    }
+
+    @Test
+    public void numberTest() {
+        Pattern pattern = Pattern.compile("^\\d+$");
+        String a = "4bc";
+
+        Matcher m = pattern.matcher(String.valueOf(a.charAt(0)));
+        System.out.println(m.matches());
     }
 }

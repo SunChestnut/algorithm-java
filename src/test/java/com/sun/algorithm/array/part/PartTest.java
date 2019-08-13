@@ -1,4 +1,4 @@
-package com.sun.leetcode.array.part;
+package com.sun.algorithm.array.part;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
