@@ -1,4 +1,4 @@
-package com.sun.util;
+package com.sun.algorithm.util;
 
 import java.time.Duration;
 import java.time.Instant;

@@ -1,4 +1,4 @@
-package com.sun.leetcode.array.part;
+package com.sun.algorithm.array.part;
 
 /**
  * 题目：买卖股票的最佳时机

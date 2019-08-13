@@ -1,6 +1,4 @@
-package com.sun.leetcode.array.part;
-
-import java.util.Arrays;
+package com.sun.algorithm.array.part;
 
 /**
  * 题目：删除数组中的重复项

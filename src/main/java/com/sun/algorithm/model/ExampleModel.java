@@ -1,4 +1,4 @@
-package com.sun.model;
+package com.sun.algorithm.model;
 
 
 /**
