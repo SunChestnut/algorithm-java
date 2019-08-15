@@ -46,7 +46,7 @@ package com.sun.algorithm.solution;
  * @author: syl
  * @date: 2019/7/19 16:36
  **/
-class SolutionTwelfth {
+class IntegerToRoman {
 
     static String intToRoman(int num) {
         final int[] radix = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};

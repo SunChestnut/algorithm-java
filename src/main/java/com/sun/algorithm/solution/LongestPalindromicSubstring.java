@@ -17,7 +17,7 @@ package com.sun.algorithm.solution;
  * @author: syl
  * @date: 2019/6/20 17:08
  **/
-class SolutionFive {
+class LongestPalindromicSubstring {
 
     static String longestPalindrome(String s) {
         int n = s.length();

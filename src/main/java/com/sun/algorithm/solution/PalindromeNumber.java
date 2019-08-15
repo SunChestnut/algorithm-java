@@ -24,7 +24,7 @@ package com.sun.algorithm.solution;
  * @author: syl
  * @date: 2019/7/9 16:58
  **/
-class SolutionNine {
+class PalindromeNumber {
 
     /**
      * 解法一：将数字转换成字符串
@@ -32,7 +32,7 @@ class SolutionNine {
      * @param x x
      * @return boolean
      */
-    static boolean isPalindromeMethodOne(int x) {
+    static boolean isPalindromeMethodI(int x) {
         if (x < 0) {
             return false;
         }
@@ -57,7 +57,7 @@ class SolutionNine {
      * @param x x
      * @return boolean
      */
-    static boolean isPalindromeMethodTwo(int x) {
+    static boolean isPalindromeMethodII(int x) {
         String reversedStr = (new StringBuilder(x + "").reverse().toString());
         return (x + "").equals(reversedStr);
     }
@@ -75,7 +75,7 @@ class SolutionNine {
      * @param x x
      * @return boolean
      */
-    static boolean isPalindromeMethodThree(int x) {
+    static boolean isPalindromeMethodIII(int x) {
         if (x < 0) {
             return false;
         }
@@ -112,7 +112,7 @@ class SolutionNine {
      * @param x x
      * @return boolean
      */
-    static boolean isPalindromeMethodFour(int x) {
+    static boolean isPalindromeMethodIV(int x) {
         // 当x为负数或者x的最后一位为0时，直接返回false
         if (x < 0 || (x % 10 == 0 && x != 0)) {
             return false;

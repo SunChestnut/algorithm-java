@@ -21,7 +21,7 @@ import java.util.Arrays;
  * @author: syl
  * @date: 2019/6/19 15:13
  **/
-class SolutionFour {
+class MedianOfTwoSortedArrays {
 
     /**
      * 解题思路：

@@ -30,7 +30,7 @@ import java.util.List;
  * @author: syl
  * @date: 2019/6/27 15:54
  **/
-class SolutionSix {
+class ZigZagConversion {
 
     static String convert(String s, int numRows) {
         if (numRows == 1) {

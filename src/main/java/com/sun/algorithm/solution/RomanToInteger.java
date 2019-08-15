@@ -50,7 +50,7 @@ import java.util.Map;
  * @author: syl
  * @date: 2019/7/23 9:55
  **/
-class SolutionThirteenth {
+class RomanToInteger {
 
     private static Map<Character, Integer> map;
 

@@ -27,7 +27,7 @@ import java.util.Set;
  * @author: syl
  * @date: 2019/6/18 17:31
  **/
-class SolutionThree {
+class LongSubstringWithoutRepeatingChar {
 
     /*……********************* 方法一：暴力法 *********************……*/
 

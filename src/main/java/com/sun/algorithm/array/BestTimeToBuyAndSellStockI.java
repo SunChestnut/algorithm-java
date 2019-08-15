@@ -1,4 +1,4 @@
-package com.sun.algorithm.array.part;
+package com.sun.algorithm.array;
 
 /**
  * 题目：买卖股票的最佳时机
@@ -21,7 +21,7 @@ package com.sun.algorithm.array.part;
  * @author: syl
  * @date: 2019/7/25 11:19
  **/
-class PartTwo {
+class BestTimeToBuyAndSellStockI {
 
     /**
      * 暴力法
@@ -30,7 +30,7 @@ class PartTwo {
      * @param prices 源数组
      * @return int 最大利润
      */
-    static int maxProfitOne(int[] prices) {
+    static int maxProfitI(int[] prices) {
         int maxProfit = 0;
         for (int i = 0; i < prices.length; i++) {
             for (int j = i + 1; j < prices.length; j++) {
@@ -51,7 +51,7 @@ class PartTwo {
      * @param prices 源数组
      * @return int 最大利润
      */
-    static int maxProfitTwo(int[] prices) {
+    static int maxProfitII(int[] prices) {
         int minPrice = Integer.MAX_VALUE;
         int maxProfit = 0;
         for (int i = 0; i < prices.length; i++) {
@@ -72,7 +72,7 @@ class PartTwo {
      * @param prices 源数组
      * @return int 最大利润
      */
-    static int maxProfitThree(int[] prices) {
+    static int maxProfitIII(int[] prices) {
         int minPrice = Integer.MAX_VALUE;
         int maxProfit = 0;
         for (int price : prices) {

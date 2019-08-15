@@ -1,4 +1,4 @@
-package com.sun.algorithm.array.part;
+package com.sun.algorithm.array;
 
 /**
  * 题目：删除数组中的重复项
@@ -31,7 +31,7 @@ package com.sun.algorithm.array.part;
  * @author: syl
  * @date: 2019/7/24 15:34
  **/
-class PartOne {
+class RemoveDuplicatesFromSortedArray {
 
     /**
      * 双指针法

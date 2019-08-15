@@ -21,7 +21,7 @@ import java.text.DecimalFormat;
  * @author: syl
  * @date: 2019/6/26 10:08
  **/
-class SolutionSeven {
+class ReverseInteger {
 
     static int reverse(int x) {
         DecimalFormat df = new DecimalFormat("0");

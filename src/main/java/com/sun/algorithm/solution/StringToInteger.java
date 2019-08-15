@@ -6,7 +6,7 @@ package com.sun.algorithm.solution;
  * @Author: syl
  * @Date: 2019/8/13 9:12
  **/
-class SolutionEight {
+class StringToInteger {
 
     /**
      * 1.删除字符串中的子空串
