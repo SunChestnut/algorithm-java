@@ -6,6 +6,8 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.Arrays;
+
 @SpringBootTest
 @RunWith(SpringRunner.class)
 public class PartTest {
@@ -43,6 +45,17 @@ public class PartTest {
         Assert.assertEquals(7, BestTimeToBuyAndSellStockII.maxProfit(pricesA));
         Assert.assertEquals(4, BestTimeToBuyAndSellStockII.maxProfit(pricesB));
         Assert.assertEquals(0, BestTimeToBuyAndSellStockII.maxProfit(pricesC));
+
+    }
+
+    @Test
+    public void rotateArrayTest() {
+        int[] nums = {1, 2, 3, 4, 5, 6, 7};
+        int k = 3;
+//        RotateArray.rotateI(nums, k);
+        RotateArray.rotateII(nums,k);
+        System.out.println(Arrays.toString(nums));
+
 
     }
 }
