@@ -58,4 +58,35 @@ public class DailyTest {
         Matcher m = pattern.matcher(String.valueOf(a.charAt(0)));
         System.out.println(m.matches());
     }
+
+    @Test
+    public void soutTime() {
+        byte b1 = 1, b2 = 2, b3, b6, b8;
+        final byte b4 = 4, b5 = 6, b7;
+
+
+        final byte a1 = 1;
+        final int a2 = 2;
+
+        byte result1 = a1 + a2;
+        int result2 = a1 + a2;
+
+        Byte b = 3;
+        System.out.println(b.getClass().getName());
+
+
+        String a = "abc";
+        System.out.println(a.getClass().getName());
+
+    }
+
+    @Test
+    public void todayTest() {
+        StringBuffer buffer = new StringBuffer();
+        buffer.append("abc");
+        String abc = buffer.toString();
+
+        System.out.println();
+
+    }
 }

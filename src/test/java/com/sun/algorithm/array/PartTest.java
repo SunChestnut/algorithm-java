@@ -53,9 +53,23 @@ public class PartTest {
         int[] nums = {1, 2, 3, 4, 5, 6, 7};
         int k = 3;
 //        RotateArray.rotateI(nums, k);
-        RotateArray.rotateII(nums,k);
+        RotateArray.rotateII(nums, k);
         System.out.println(Arrays.toString(nums));
 
 
+    }
+
+    @Test
+    public void containsDuplicateTest() {
+        int[] numsA = {1, 2, 3, 4};
+        int[] numsB = {1, 1, 1, 3, 3, 4, 3, 2, 4, 2};
+
+        Assert.assertFalse(ContainsDuplicate.containsDuplicateI(numsA));
+        Assert.assertFalse(ContainsDuplicate.containsDuplicateII(numsA));
+        Assert.assertFalse(ContainsDuplicate.containsDuplicateIII(numsA));
+
+        Assert.assertTrue(ContainsDuplicate.containsDuplicateI(numsB));
+        Assert.assertTrue(ContainsDuplicate.containsDuplicateII(numsB));
+        Assert.assertTrue(ContainsDuplicate.containsDuplicateIII(numsB));
     }
 }
