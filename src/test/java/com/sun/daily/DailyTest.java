@@ -6,7 +6,9 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -82,11 +84,11 @@ public class DailyTest {
 
     @Test
     public void todayTest() {
-        StringBuffer buffer = new StringBuffer();
-        buffer.append("abc");
-        String abc = buffer.toString();
+        Map map = new HashMap();
+        System.out.println(map.getClass());
 
-        System.out.println();
+        String abc = new String();
+        System.out.println(abc.getClass());
 
     }
 }
