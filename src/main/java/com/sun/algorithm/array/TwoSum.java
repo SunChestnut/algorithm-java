@@ -1,4 +1,4 @@
-package com.sun.algorithm.solution;
+package com.sun.algorithm.array;
 
 import java.util.HashMap;
 import java.util.Map;

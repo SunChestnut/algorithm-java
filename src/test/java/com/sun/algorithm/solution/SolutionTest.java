@@ -13,15 +13,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class SolutionTest {
 
     @Test
-    public void twoSumTest() {
-        int[] nums = {3, 2, 4};
-        int target = 6;
-
-        Assert.assertArrayEquals(new int[]{1, 2}, TwoSum.twoSumI(nums, target));
-        Assert.assertArrayEquals(new int[]{1, 2}, TwoSum.twoSumII(nums, target));
-    }
-
-    @Test
     public void longSubstringWithoutRepeatingCharTest() {
         String s = ExampleModel.exampleOne;
 
