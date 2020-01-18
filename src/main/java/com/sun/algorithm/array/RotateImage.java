@@ -58,7 +58,7 @@ public class RotateImage {
             }
         }
 
-        // 沿着水瓶中线反转
+        // 沿着水平中线反转
         for (int i = 0; i < n / 2; i++) {
             for (int j = 0; j < n; j++) {
                 swap(matrix, i, j, n - i - 1, j);
