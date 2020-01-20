@@ -1,4 +1,4 @@
-package com.sun.algorithm.str;
+package com.sun.algorithm.solution;
 
 import java.util.Arrays;
 

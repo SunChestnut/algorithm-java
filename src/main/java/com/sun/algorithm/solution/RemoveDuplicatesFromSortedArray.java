@@ -1,4 +1,4 @@
-package com.sun.algorithm.array;
+package com.sun.algorithm.solution;
 
 /**
  * 题目：删除数组中的重复项

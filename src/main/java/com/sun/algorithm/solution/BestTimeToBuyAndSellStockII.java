@@ -1,7 +1,7 @@
-package com.sun.algorithm.array;
+package com.sun.algorithm.solution;
 
 /**
- * 题目：买卖股票的最佳时机II
+ * 题目：买卖股票的最佳时机II（BestTimeToBuyAndSellStockII）
  * 给定一个数组，它的第i个元素是一支给定股票第i天的价格。
  * 设计一个算法来记算所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一只股票）。
  * 注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）
