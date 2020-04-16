@@ -28,6 +28,9 @@ public class LongestCommonPrefix {
             return "";
         }
 
+        // 取数组中的一个字符串去循环匹配数组中的其他字符串
+        // 如果不匹配就截去最后一个字符继续循环，匹配完成就匹配下一个字符串，直到最后
+        // 如果匹配串在匹配过程中长度为截取为0，则直接返回不匹配
         String prefix = strs[0];
         for (int i = 1; i < strs.length; i++) {
             while (strs[i].indexOf(prefix) != 0) {
