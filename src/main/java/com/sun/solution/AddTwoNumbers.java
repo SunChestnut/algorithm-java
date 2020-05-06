@@ -1,10 +1,8 @@
 package com.sun.solution;
 
-import java.util.Deque;
-import java.util.LinkedList;
 
 /**
- * TODO
+ * 2. 两数相加
  *
  * @author syl
  * @date 2020/04/19 - 15:14
@@ -22,59 +20,57 @@ public class AddTwoNumbers {
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
-        Deque<Integer> d1 = new LinkedList<>();
-        Deque<Integer> d2 = new LinkedList<>();
+        ListNode dummyHead = new ListNode(0);
+        ListNode p = l1, q = l2, cur = dummyHead;
 
-        ListNode cur1 = l1;
-        while (cur1 != null) {
-            d1.addFirst(cur1.val);
-            cur1 = cur1.next;
+        int carry = 0;
+        while (p != null || q != null) {
+            int x = (p != null) ? p.val : 0;
+            int y = (q != null) ? q.val : 0;
+
+            int sum = x + y + carry;
+
+            carry = sum / 10;
+
+            cur.next = new ListNode(sum % 10);
+            cur = cur.next;
+
+            if (p != null) {
+                p = p.next;
+            }
+            if (q != null) {
+                q = q.next;
+            }
         }
 
-        ListNode cur2 = l2;
-        while (cur2 != null) {
-            d2.addFirst(cur2.val);
-            cur2 = cur2.next;
+        if (carry > 0) {
+            cur.next = new ListNode(carry);
         }
 
-        System.out.println(d1);
-        System.out.println(d2);
-
-        StringBuilder s1 = new StringBuilder();
-        for (Integer v : d1) {
-            s1.append(v);
-        }
-
-        StringBuilder s2 = new StringBuilder();
-        for (Integer v : d2) {
-            s2.append(v);
-        }
-
-        System.out.println(s1);
-        System.out.println(s2);
-
-        int a1 = Integer.parseInt(String.valueOf(s1));
-        int a2 = Integer.parseInt(String.valueOf(s2));
-
-        System.out.println(a1 + a2);
-
-
-
-        return null;
-
+        return dummyHead.next;
     }
 
     public static void main(String[] args) {
-        ListNode l1 = new ListNode(2);
-        l1.next = new ListNode(4);
-        l1.next.next = new ListNode(3);
+        ListNode l1 = new ListNode(9);
 
-        ListNode l2 = new ListNode(5);
-        l2.next = new ListNode(6);
-        l2.next.next = new ListNode(4);
+        ListNode l2 = new ListNode(1);
+        l2.next = new ListNode(9);
+        l2.next.next = new ListNode(9);
+        l2.next.next.next = new ListNode(9);
+        l2.next.next.next.next = new ListNode(9);
+        l2.next.next.next.next.next = new ListNode(9);
+        l2.next.next.next.next.next.next = new ListNode(9);
+        l2.next.next.next.next.next.next.next = new ListNode(9);
+        l2.next.next.next.next.next.next.next.next = new ListNode(9);
+        l2.next.next.next.next.next.next.next.next.next = new ListNode(9);
+
+        ListNode l3 = new ListNode(0);
+        ListNode l4 = new ListNode(0);
 
         AddTwoNumbers solution = new AddTwoNumbers();
-        solution.addTwoNumbers(l1, l2);
-    }
+        ListNode res = solution.addTwoNumbers(l3, l4);
 
+        System.out.println(res.toString());
+
+    }
 }
