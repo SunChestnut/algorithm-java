@@ -10,23 +10,19 @@ public class BinarySearch {
 
     public int search(int[] nums, int target) {
 
-        int n = nums.length;
+        int pivot, l = 0, r = nums.length - 1;
 
-        int left = 0, right = n - 1, mid = n / 2;
-
-        while (left <= right) {
-            if (nums[mid] == target) {
-                return mid;
+        while (l <= r) {
+            pivot = l + (r - l) / 2;
+            if (nums[pivot] == target) {
+                return pivot;
             }
 
-            if (nums[mid] > target) {
-                right = mid - 1;
+            if (nums[pivot] > target) {
+                r = pivot - 1;
+            } else {
+                l = pivot + 1;
             }
-
-            if (nums[mid] < target) {
-                left = mid + 1;
-            }
-            mid = (left + right) / 2;
         }
         return -1;
     }
