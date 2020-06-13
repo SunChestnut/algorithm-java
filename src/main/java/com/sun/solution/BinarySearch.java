@@ -9,7 +9,7 @@ package com.sun.solution;
 public class BinarySearch {
 
     /**
-     * 二分查找模板一
+     * 二分查找模板一：用于查找可以通过访问数组中的单个索引来确定的元素或条件
      *
      * @param nums   源数组
      * @param target 目标值
@@ -35,7 +35,7 @@ public class BinarySearch {
     }
 
     /**
-     * 二分查找模板二
+     * 二分查找模板二：用于查找访问数组中当前索引及其直接右邻居索引的
      *
      * @param nums   源数组
      * @param target 目标值
@@ -66,17 +66,36 @@ public class BinarySearch {
         return -1;
     }
 
-    public static void main(String[] args) {
-        BinarySearch solution = new BinarySearch();
-        System.out.println(solution.searchI(new int[]{-1, 0, 3, 5, 9, 12}, 9));
-        System.out.println(solution.searchI(new int[]{-1, 0, 3, 5, 9, 12}, 2));
-        System.out.println(solution.searchI(new int[]{5}, 5));
-        System.out.println(solution.searchI(new int[]{5}, 9));
-        System.out.println("-------------------------------------------");
-        System.out.println(solution.searchII(new int[]{-1, 0, 3, 5, 9, 12}, 9));
-        System.out.println(solution.searchII(new int[]{-1, 0, 3, 5, 9, 12}, 2));
-        System.out.println(solution.searchII(new int[]{5}, 5));
-        System.out.println(solution.searchII(new int[]{5}, 9));
+    /**
+     * 二分查找模板三：用于搜索需要访问当前索引及其在数组中的直接左右邻居索引的元素或条件
+     *
+     * @param nums   源数组
+     * @param target 目标值
+     * @return 数组下标
+     */
+    public int searchIII(int[] nums, int target) {
+
+        int l = 0, r = nums.length - 1;
+
+        while (l + 1 < r) {
+            int mid = l + (r - l) / 2;
+
+            if (nums[mid] == target) {
+                return mid;
+            } else if (nums[mid] > target) {
+                r = mid;
+            } else {
+                l = mid;
+            }
+        }
+
+        if (nums[l] == target) {
+            return l;
+        }
+        if (nums[r] == target) {
+            return r;
+        }
+        return -1;
     }
 
 }
