@@ -52,4 +52,43 @@ public class FindFirstAndLastPositionOfElementInSortedArray {
         return new int[]{sPosition, ePosition};
     }
 
+    /**
+     * 官方解法
+     *
+     * @param nums   待查找数组
+     * @param target 目标值
+     * @return 目标值在数组中的开始位置和结束位置
+     */
+    public int[] searchRangeFromOfficial(int[] nums, int target) {
+
+        int[] targetRange = new int[]{-1, -1};
+
+        int leftIndex = extremeInsertionIndex(nums, target, true);
+
+        // nums 中不存在 target 值的情况
+        if (leftIndex == nums.length || nums[leftIndex] != target) {
+            return targetRange;
+        }
+
+        targetRange[0] = leftIndex;
+        targetRange[1] = extremeInsertionIndex(nums, target, false) - 1;
+
+        return targetRange;
+    }
+
+    private int extremeInsertionIndex(int[] nums, int target, boolean left) {
+        int lo = 0;
+        int hi = nums.length;
+
+        while (lo < hi) {
+            int mid = lo + (hi - lo) / 2;
+            if (nums[mid] > target || (left && target == nums[mid])) {
+                hi = mid;
+            } else {
+                lo = mid + 1;
+            }
+        }
+        return lo;
+    }
+
 }

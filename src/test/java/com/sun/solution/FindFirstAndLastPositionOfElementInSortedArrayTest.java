@@ -13,7 +13,7 @@ class FindFirstAndLastPositionOfElementInSortedArrayTest {
     private final int[] nums3 = new int[]{};
 
     @Test
-    void searchRange() {
+    void searchRangeTest() {
         int[] res1 = solution.searchRange(nums1, 8);
         Assert.assertArrayEquals(new int[]{3, 4}, res1);
 
@@ -24,6 +24,21 @@ class FindFirstAndLastPositionOfElementInSortedArrayTest {
         Assert.assertArrayEquals(new int[]{0, 0}, res3);
 
         int[] res4 = solution.searchRange(nums3, 0);
+        Assert.assertArrayEquals(new int[]{-1,-1}, res4);
+    }
+
+    @Test
+    void searchRangeFromOfficialTest(){
+        int[] res1 = solution.searchRangeFromOfficial(nums1, 8);
+        Assert.assertArrayEquals(new int[]{3, 4}, res1);
+
+        int[] res2 = solution.searchRangeFromOfficial(nums1, 6);
+        Assert.assertArrayEquals(new int[]{-1, -1}, res2);
+
+        int[] res3 = solution.searchRangeFromOfficial(nums2, 1);
+        Assert.assertArrayEquals(new int[]{0, 0}, res3);
+
+        int[] res4 = solution.searchRangeFromOfficial(nums3, 0);
         Assert.assertArrayEquals(new int[]{-1,-1}, res4);
     }
 }
