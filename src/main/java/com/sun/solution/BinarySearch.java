@@ -16,15 +16,12 @@ public class BinarySearch {
      * @return 数组下标
      */
     public int searchI(int[] nums, int target) {
-
         int mid, l = 0, r = nums.length - 1;
-
         while (l <= r) {
             mid = l + (r - l) / 2;
             if (nums[mid] == target) {
                 return mid;
             }
-
             if (nums[mid] > target) {
                 r = mid - 1;
             } else {
@@ -35,34 +32,28 @@ public class BinarySearch {
     }
 
     /**
-     * 二分查找模板二：用于查找访问数组中当前索引及其直接右邻居索引的
+     * 二分查找模板二：用于查找访问数组中 当前索引 及其 直接右邻居索引的
      *
      * @param nums   源数组
      * @param target 目标值
      * @return 数组下标
      */
     public int searchII(int[] nums, int target) {
-
         int mid, l = 0, r = nums.length - 1;
-
         while (l < r) {
             mid = l + (r - l) / 2;
-
             if (nums[mid] == target) {
                 return mid;
             }
-
             if (nums[mid] < target) {
                 l = mid + 1;
             } else {
                 r = mid;
             }
         }
-
         if (l != nums.length && nums[l] == target) {
             return l;
         }
-
         return -1;
     }
 
@@ -74,12 +65,9 @@ public class BinarySearch {
      * @return 数组下标
      */
     public int searchIII(int[] nums, int target) {
-
         int l = 0, r = nums.length - 1;
-
         while (l + 1 < r) {
             int mid = l + (r - l) / 2;
-
             if (nums[mid] == target) {
                 return mid;
             } else if (nums[mid] > target) {
@@ -88,7 +76,6 @@ public class BinarySearch {
                 l = mid;
             }
         }
-
         if (nums[l] == target) {
             return l;
         }
