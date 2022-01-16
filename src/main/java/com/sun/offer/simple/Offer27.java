@@ -3,6 +3,7 @@ package com.sun.offer.simple;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;
 import java.util.LinkedList;
@@ -40,18 +41,18 @@ public class Offer27 {
     }
 
     public static TreeNode mirrorTreeWithStack(TreeNode root) {
-        if (null == root) {
-            return null;
+        if (root == null) {
+            return root;
         }
-        Deque<TreeNode> deque = new LinkedList<>();
-        deque.add(root);
-        while (!deque.isEmpty()) {
-            TreeNode node = deque.pop();
+        Deque<TreeNode> stack = new ArrayDeque<>();
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            TreeNode node = stack.pop();
             if (node.left != null) {
-                deque.add(node.left);
+                stack.push(node.left);
             }
             if (node.right != null) {
-                deque.add(node.right);
+                stack.push(node.right);
             }
             TreeNode tmp = node.left;
             node.left = node.right;

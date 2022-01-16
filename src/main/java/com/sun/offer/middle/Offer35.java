@@ -1,5 +1,8 @@
 package com.sun.offer.middle;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @author sunyl
  * @date 2021/10/13 2:38 下午
@@ -35,6 +38,25 @@ public class Offer35 {
         return headNew;
     }
 
+    public static Node copyRandomListWithHash(Node head) {
+        if (null == head) {
+            return null;
+        }
+        Map<Node, Node> dict = new HashMap<>();
+        Node k = head;
+        while (k != null) {
+            dict.put(k, new Node(k.val));
+            k = k.next;
+        }
+        k = head;
+        while (k != null) {
+            dict.get(k).next = dict.get(k.next);
+            dict.get(k).random = dict.get(k.random);
+            k = k.next;
+        }
+        return dict.get(head);
+    }
+
     public static void main(String[] args) {
         Node head = new Node(7);
         Node node2 = new Node(13);
@@ -63,6 +85,16 @@ public class Offer35 {
 
         Node node = copyRandomList(head);
         System.out.println(node);
+
+        Node head1 = new Node(1);
+        Node hNode1 = new Node(2);
+        head1.next = hNode1;
+        head1.random = hNode1;
+        hNode1.next = null;
+        hNode1.random = hNode1;
+
+        Node node1 = copyRandomListWithHash(head1);
+        System.out.println(node1);
     }
 
     static class Node {
@@ -76,7 +108,7 @@ public class Offer35 {
             this.random = null;
         }
 
-//        @Override
+        //        @Override
 //        public String toString() {
 //            return "Node{" +
 //                    "val=" + val +
