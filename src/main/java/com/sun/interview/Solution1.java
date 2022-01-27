@@ -1,11 +1,11 @@
-package com.sun.inverview;
+package com.sun.interview;
 
 /**
  * 【长按键入】
  *
  * @author sunyl
  * @date 2021/12/31 10:43 上午
- * @see com.sun.inverview
+ * @see com.sun.interview
  */
 public class Solution1 {
 

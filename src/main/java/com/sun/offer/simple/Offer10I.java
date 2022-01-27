@@ -39,7 +39,6 @@ public class Offer10I {
         if (1 == n) {
             return 1;
         }
-        System.out.println("Cur Value : " + n);
         return (fibWithRecur(n - 1) + fibWithRecur(n - 2)) % 1000000007;
     }
 

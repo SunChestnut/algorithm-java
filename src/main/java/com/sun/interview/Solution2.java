@@ -1,11 +1,11 @@
-package com.sun.inverview;
+package com.sun.interview;
 
 import java.util.Arrays;
 
 /**
  * @author sunyl
  * @date 2021/12/31 11:32 上午
- * @see com.sun.inverview
+ * @see com.sun.interview
  */
 public class Solution2 {
 
