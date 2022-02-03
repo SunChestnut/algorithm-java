@@ -1,4 +1,4 @@
-package com.sun.basic;
+package com.sun.basic.quicksort;
 
 import java.util.Arrays;
 
@@ -7,7 +7,7 @@ import java.util.Arrays;
  * @date 2022/1/24 4:16 PM
  * @see com.sun.basic
  */
-public class QuickSort {
+public class QuickSortWithRecur {
 
     public static void quickSort(int[] nums) {
         int n = nums.length;

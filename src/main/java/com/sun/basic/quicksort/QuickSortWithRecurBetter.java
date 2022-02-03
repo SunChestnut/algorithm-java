@@ -1,4 +1,4 @@
-package com.sun.basic;
+package com.sun.basic.quicksort;
 
 import java.util.Arrays;
 
@@ -7,9 +7,9 @@ import java.util.Arrays;
  * @date 2022/1/24 7:04 PM
  * @see com.sun.basic
  */
-public class QuickSortBetter {
+public class QuickSortWithRecurBetter {
 
-    public static void quickSort(int[] nums) {
+    public static void sort(int[] nums) {
         int n = nums.length;
         quickSort(nums, 0, n - 1);
     }
@@ -46,7 +46,7 @@ public class QuickSortBetter {
 
     public static void main(String[] args) {
         int[] nums = {8, 5, 4, 2, 6, 7, 10, 3};
-        quickSort(nums);
+        sort(nums);
         System.out.println(Arrays.toString(nums));
     }
 }
