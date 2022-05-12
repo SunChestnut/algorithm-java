@@ -1,5 +1,6 @@
 package com.sun.solution;
 
+import com.sun.solution.simple.FindFirstAndLastPositionOfElementInSortedArray;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 

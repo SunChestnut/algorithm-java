@@ -1,5 +1,6 @@
 package com.sun.solution;
 
+import com.sun.solution.simple.FindKClosestElements;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
