@@ -6,7 +6,7 @@ package com.sun.interview;
  * @author syl
  * @date 2020/04/27 - 15:59
  */
-public class IsUniqueLCCI {
+public class IsUnique {
 
     public boolean isUnique(String astr) {
         char[] charArray = astr.toCharArray();
@@ -36,7 +36,7 @@ public class IsUniqueLCCI {
     }
 
     public static void main(String[] args) {
-        IsUniqueLCCI solution = new IsUniqueLCCI();
+        IsUnique solution = new IsUnique();
         System.out.println(solution.isUnique("leetcode"));
         System.out.println(solution.isUnique("abc"));
 
